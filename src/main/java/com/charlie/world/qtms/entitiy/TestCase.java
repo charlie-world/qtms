@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@Table(name = "test_case")
 public class TestCase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,7 +30,7 @@ public class TestCase {
     @Column(length = 128, nullable = false)
     private String expectedResult;
 
-    @Column(length = 10, nullable = true)
+    @Column(length = 20, nullable = true)
     private String lastTester;
 
     @Column(nullable = false)
