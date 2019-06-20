@@ -1,13 +1,12 @@
 package com.charlie.world.qtms.service;
 
+import lombok.Data;
+
+@Data
 public class Hello {
-    private final String page;
+    private final String msg;
 
     public Hello() {
-        this.page = "Hello";
-    }
-
-    public String getPage() {
-        return this.page;
+        this.msg = "Hello QTMS !";
     }
 }
