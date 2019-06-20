@@ -1,0 +1,33 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.charlie.world'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.9'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
