@@ -1,0 +1,10 @@
+CREATE TABLE `qtms`.`test_case` (
+  `test_case_id` BIGINT(12) NOT NULL AUTO_INCREMENT,
+  `case_description` VARCHAR(45) NOT NULL,
+  `pre_condition` VARCHAR(45) NOT NULL,
+  `test_step` VARCHAR(128) NOT NULL,
+  `expected_result` VARCHAR(128) NOT NULL,
+  `last_tester` VARCHAR(20) NULL,
+  `result` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`test_case_id`)
+);

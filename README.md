@@ -24,11 +24,16 @@
 - java 8
 - gradle &gt;=5.4.1
 
-## Install
+## Quick Start
 
 ```sh
 gradlew build
 cp ./build/lib/*.jar app.jar
+
+export MYSQL_URL={INPUT_YOUR_MYSQL_URL} // ex) jdbc:mysql://localhost:3306/my_db
+export MYSQL_USERNAME={INPUT_YOUR_MYSQL_USERNAME}
+export MYSQL_PASSWORD={INPUT_YOUR_MYSQL_PASSWORD}
+
 java -jar app.jar
 ```
 

@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "test_case")
 public class TestCase {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long testCaseId;
 
     @Column(length = 45, nullable = false)
